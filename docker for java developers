@@ -1,1 +1,25 @@
+install docker engine:
+https://docs.docker.com/engine/install/ubuntu/
+---
+add the Docker group:
+ sudo groupadd docker
+ --
+ add your own user to the Docker group
+ sudo gpasswd -a (username) docker
+ --
+ Restart the Docker daemon: 
+ sudo service docker restart
+ --
+ verify if docker works:
+ sudo docker run milkyway/java-hello-world
+ --
+ chapter 2:Networking and Persistent Storage:
+ how to configure networking 
+ obj=enable my  web app  to communicate with other containers
+ we will also focus on data volumes as a way to persist the data
+between container run and stop cycles.
+Docker network types:
+$ docker network ls
+Bridge:This is the default network type in Docker+. When the Docker service daemon starts, it
+configures a virtual bridge, named docker0
 
